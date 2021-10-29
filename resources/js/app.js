@@ -1,0 +1,1 @@
+require('../../public/js/bootstrap');
