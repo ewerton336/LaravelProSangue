@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Doador;
 use Illuminate\Http\Request;
+use App\Http\Resources\Doador as DoadorResource;
 
 class DoadorController extends Controller
 {
@@ -16,7 +17,7 @@ class DoadorController extends Controller
     {
         $doadores = Doador::all();
 
-        return View('doador.index')->with('varView',$doadores);
+        return View('doador.index')->with('varView', $doadores);
     }
 
     /**
@@ -32,7 +33,7 @@ class DoadorController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -44,35 +45,35 @@ class DoadorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Doador  $doador
+     * @param \App\Models\Doador $doador
      * @return \Illuminate\Http\Response
      */
     public function show(Doador $doador)
     {
-        //
+//
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Doador  $doador
+     * @param \App\Models\Doador $doador
      * @return \Illuminate\Http\Response
      */
     public function edit(Doador $doador)
     {
-        return View('doador.edit')->with('dep',$doador);
+        return View('doador.edit')->with('dep', $doador);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Doador  $doador
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Doador $doador
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Doador $doador)
     {
-        $doador->update(  $request->all()  );
+        $doador->update($request->all());
 
         return redirect('/doador');
     }
@@ -80,11 +81,13 @@ class DoadorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Doador  $doador
+     * @param \App\Models\Doador $doador
      * @return \Illuminate\Http\Response
      */
     public function destroy(Doador $doador)
     {
         //
     }
+
+
 }

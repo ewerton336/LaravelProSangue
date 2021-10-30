@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CedenteLocal;
+use App\Models\Doador;
 use Illuminate\Http\Request;
 
 class CedenteLocalController extends Controller
@@ -14,7 +15,9 @@ class CedenteLocalController extends Controller
      */
     public function index()
     {
-        //
+        $cedente = CedenteLocal::all();
+
+        return View('cedenteLocal.index')->with('varView', $cedente);
     }
 
     /**
@@ -24,7 +27,7 @@ class CedenteLocalController extends Controller
      */
     public function create()
     {
-        //
+        return View('cedenteLocal.create');
     }
 
     /**
@@ -35,7 +38,8 @@ class CedenteLocalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CedenteLocal::create($request->all());
+        return redirect("/cedenteLocal");
     }
 
     /**
@@ -57,7 +61,7 @@ class CedenteLocalController extends Controller
      */
     public function edit(CedenteLocal $cedenteLocal)
     {
-        //
+        return View('cedenteLocal.edit')->with('dep', $cedenteLocal);
     }
 
     /**
@@ -69,7 +73,8 @@ class CedenteLocalController extends Controller
      */
     public function update(Request $request, CedenteLocal $cedenteLocal)
     {
-        //
+        $cedenteLocal->update($request->all());
+        return redirect('/cedenteLocal');
     }
 
     /**

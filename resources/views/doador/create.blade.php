@@ -1,7 +1,7 @@
 @extends('master')
 @section('titulo', 'Criar')
 @section('corpo')
-    <h3>Doadores</h3>
+    <h3>Novo Doador</h3>
     @foreach($errors->all() as $e)
         {{$e}}
     @endforeach
@@ -14,6 +14,6 @@
         Telefone: <input type="text" name="telefone"> <br>
         Cidade Doação: <input type="text" name="cidade_doacao"> <br>
         Tipo Sanguineo: <input type="text" name="tipo_sanguineo"> <br>
-        <input type="submit" value="Criar">
+        <input type="submit" class="btn btn-primary btn-sm" value="Criar">
     </form>
 @endsection

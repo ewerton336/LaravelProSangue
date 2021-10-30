@@ -3,9 +3,7 @@
 @section('corpo')
     <div class="container-fluid col-12">
     <h3>Doadores:</h3>
-    <a href="/doador/create">Novo Doador</a>
-
-        <h1>teste</h1>
+        <h2><a href="/doador/create" class="btn btn-primary ">Nova Doador</a></h2>
     <br>
 
         <table class="table">

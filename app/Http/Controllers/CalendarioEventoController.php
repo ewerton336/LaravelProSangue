@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CalendarioEvento;
+use App\Models\CedenteLocal;
 use Illuminate\Http\Request;
 
 class CalendarioEventoController extends Controller
@@ -14,7 +15,9 @@ class CalendarioEventoController extends Controller
      */
     public function index()
     {
-        //
+        $calendario = CalendarioEvento::all();
+
+        return View('calendarioEvento.index')->with('varView', $calendario);
     }
 
     /**
@@ -24,7 +27,7 @@ class CalendarioEventoController extends Controller
      */
     public function create()
     {
-        //
+        return View('calendarioEvento.create');
     }
 
     /**
@@ -35,7 +38,8 @@ class CalendarioEventoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CalendarioEvento::create($request->all());
+        return redirect("/calendarioEvento");
     }
 
     /**
@@ -57,7 +61,7 @@ class CalendarioEventoController extends Controller
      */
     public function edit(CalendarioEvento $calendarioEvento)
     {
-        //
+        return View('calendarioEvento.edit')->with('dep', $calendarioEvento);
     }
 
     /**
@@ -69,7 +73,8 @@ class CalendarioEventoController extends Controller
      */
     public function update(Request $request, CalendarioEvento $calendarioEvento)
     {
-        //
+        $calendarioEvento->update($request->all());
+        return redirect('/calendarioEvento');
     }
 
     /**

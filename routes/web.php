@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::resource('doador', \App\Http\Controllers\DoadorController::class);
 Route::resource('entidadeColetora', \App\Http\Controllers\EntidadeColetoraController::class);
+Route::resource('cedenteLocal', \App\Http\Controllers\CedenteLocalController::class);
+Route::resource('calendarioEvento', \App\Http\Controllers\CalendarioEventoController::class);

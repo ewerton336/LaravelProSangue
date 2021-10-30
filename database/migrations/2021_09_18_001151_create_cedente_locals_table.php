@@ -13,14 +13,14 @@ class CreateCedenteLocalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('cedente_locais', function (Blueprint $table) {
+        Schema::create('cedente_locals', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 50);
             $table->integer('telefone');
             $table->string('endereco', 700);
             $table->string('responsavel', 70);
             $table->timestamps();
-            $table->bigInteger('usuario_id')->unsigned();
+           // $table->bigInteger('usuario_id')->unsigned();
         });
     }
 

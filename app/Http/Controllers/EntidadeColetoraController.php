@@ -61,7 +61,7 @@ class EntidadeColetoraController extends Controller
      */
     public function edit(EntidadeColetora $entidadeColetora)
     {
-        //
+        return View('entidadeColetora.edit')->with('dep',$entidadeColetora);
     }
 
     /**
@@ -73,7 +73,9 @@ class EntidadeColetoraController extends Controller
      */
     public function update(Request $request, EntidadeColetora $entidadeColetora)
     {
-        //
+        $entidadeColetora->update($request->all());
+
+        return redirect('/entidadeColetora');
     }
 
     /**
