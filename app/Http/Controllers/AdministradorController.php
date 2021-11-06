@@ -14,7 +14,9 @@ class AdministradorController extends Controller
      */
     public function index()
     {
-        //
+        $administradores = Administrador::all();
+
+        return View('administrador.index')->with('varView',$administradores);
     }
 
     /**
@@ -24,7 +26,7 @@ class AdministradorController extends Controller
      */
     public function create()
     {
-        //
+        return View('administrador.create');
     }
 
     /**
@@ -35,7 +37,8 @@ class AdministradorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Administrador::create($request->all());
+        return redirect("/administrador");
     }
 
     /**
@@ -46,7 +49,7 @@ class AdministradorController extends Controller
      */
     public function show(Administrador $administrador)
     {
-        //
+        return View('administrador.show')->with('e',$administrador);
     }
 
     /**
@@ -57,7 +60,7 @@ class AdministradorController extends Controller
      */
     public function edit(Administrador $administrador)
     {
-        //
+        return View('administrador.edit')->with('dep',$administrador);
     }
 
     /**
@@ -69,7 +72,9 @@ class AdministradorController extends Controller
      */
     public function update(Request $request, Administrador $administrador)
     {
-        //
+        $administrador->update($request->all());
+
+        return redirect('/administrador');
     }
 
     /**
@@ -80,6 +85,8 @@ class AdministradorController extends Controller
      */
     public function destroy(Administrador $administrador)
     {
-        //
+        $administrador->delete();
+
+        return redirect('/administrador');
     }
 }

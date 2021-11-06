@@ -13,12 +13,13 @@ class CreateAdministradorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('administradores', function (Blueprint $table) {
+        Schema::create('administradors', function (Blueprint $table) {
             $table->id();
-            $table->string('nome_admin',50);
+            $table->string('nome',50);
             $table->string('email',70);
+            $table->string('login',70);
+            $table->string('senha',70);
             $table->timestamps();
-            $table->bigInteger('usuario_id')->unsigned();
         });
     }
 

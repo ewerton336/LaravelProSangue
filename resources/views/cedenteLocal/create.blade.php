@@ -13,5 +13,6 @@
         Responsavel: <input type="text" name="responsavel"> <br>
 
         <input type="submit" class="btn btn-primary btn-sm" value="Criar">
+        <a href="/administrador/" class="btn btn-primary btn-sm">Voltar</a>
     </form>
 @endsection

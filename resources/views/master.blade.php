@@ -22,6 +22,7 @@
     <a class="nav-link" href="/entidadeColetora">Entidade Coletora</a>
     <a class="nav-link" href="/cedenteLocal">Cedente Local</a>
     <a class="nav-link" href="/calendarioEvento">Calendario de Eventos</a>
+    <a class="nav-link" href="/administrador">Administrador</a>
 </nav>
 
 <!-- As views filhas incluem conteúdo aqui e no outro Arrobayield acima -->

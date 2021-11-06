@@ -15,5 +15,6 @@
         Cidade Doação: <input type="text" name="cidade_doacao"> <br>
         Tipo Sanguineo: <input type="text" name="tipo_sanguineo"> <br>
         <input type="submit" class="btn btn-primary btn-sm" value="Criar">
+        <a href="/administrador/" class="btn btn-primary btn-sm">Voltar</a>
     </form>
 @endsection

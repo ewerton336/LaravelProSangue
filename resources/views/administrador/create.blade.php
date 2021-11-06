@@ -1,15 +1,16 @@
 @extends('master')
 @section('titulo', 'Criar')
 @section('corpo')
-    <h3>Nova Entidade Coletora</h3>
+    <h3>Novo Doador</h3>
     @foreach($errors->all() as $e)
         {{$e}}
     @endforeach
-    <form action="/entidadeColetora" method="post">
+    <form action="/administrador" method="post">
     @csrf <!-- token de segurança obrigatório -->
         Nome: <input type="text" name="nome"> <br>
-        Telefone: <input type="text" name="telefone"> <br>
-        Nome do responsável: <input type="text" name="nome_responsavel"> <br>
+        Email: <input type="email" name="email"> <br>
+        login: <input type="text" name="login"> <br>
+        Senha: <input type="password" name="senha"> <br>
         <input type="submit" class="btn btn-primary btn-sm" value="Criar">
         <a href="/administrador/" class="btn btn-primary btn-sm">Voltar</a>
     </form>
