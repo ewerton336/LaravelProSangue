@@ -50,7 +50,7 @@ class CedenteLocalController extends Controller
      */
     public function show(CedenteLocal $cedenteLocal)
     {
-        //
+        return View('cedenteLocal.show')->with('e',$cedenteLocal);
     }
 
     /**
@@ -85,6 +85,8 @@ class CedenteLocalController extends Controller
      */
     public function destroy(CedenteLocal $cedenteLocal)
     {
-        //
+        $cedenteLocal->delete();
+
+        return redirect('/cedenteLocal');
     }
 }

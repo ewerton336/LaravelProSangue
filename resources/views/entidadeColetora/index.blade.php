@@ -23,8 +23,8 @@
        <td>  {{ $e ->nome  }}</td>
        <td> {{$e ->telefone}}</td>
        <td>  {{$e ->nome_responsavel}}</td>
-        <td>  <a href="/entidadeColetora/{{$e->id}}" class="btn btn-primary btn-sm">Detalhe</a></td>
         <td> <a href="/entidadeColetora/{{$e->id}}/edit" class="btn btn-primary btn-sm">Editar</a></td>
+       <td> <a href="/entidadeColetora/{{$e->id}}" class="btn btn-primary btn-sm">Excluir</a></td>
 </tr>
     </div>
 

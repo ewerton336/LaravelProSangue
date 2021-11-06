@@ -26,9 +26,9 @@
                     <td> {{$e ->dt_evento}}</td>
                     <td> {{$e ->qtd_interessados}}</td>
                     <td>  {{$e ->local_coleta}}</td>
-                    <td>  {{$e ->entidade_coletora}}</td>
-                    <td>  <a href="/calendarioEvento/{{$e->id}}" class="btn btn-primary btn-sm">Detalhe</a></td>
+                    <td>  {{$e ->entidade_coletora}}</td>                
                     <td> <a href="/calendarioEvento/{{$e->id}}/edit" class="btn btn-primary btn-sm">Editar</a></td>
+                    <td>  <a href="/calendarioEvento/{{$e->id}}" class="btn btn-primary btn-sm">Excluir</a></td>
                 </tr>
         @endforeach
     </div>

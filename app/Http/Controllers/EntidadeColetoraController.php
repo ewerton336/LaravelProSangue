@@ -50,7 +50,7 @@ class EntidadeColetoraController extends Controller
      */
     public function show(EntidadeColetora $entidadeColetora)
     {
-        //
+        return View('entidadeColetora.show')->with('e',$entidadeColetora);
     }
 
     /**
@@ -86,6 +86,8 @@ class EntidadeColetoraController extends Controller
      */
     public function destroy(EntidadeColetora $entidadeColetora)
     {
-        //
+        $entidadeColetora->delete();
+
+        return redirect('/entidadeColetora');
     }
 }

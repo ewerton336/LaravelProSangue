@@ -32,19 +32,32 @@
                             <p class="text-danger">{{$errors->first('local_coleta')}}</p>
                         @endif
                     </div>
-                    <div>
-                        <label for="entidade_coletora">Entidade Coletora</label>
-                        <input type="text" name="entidade_coletora" id="entidade_coletora" class="form-control"
-                               value="{{(empty(old('entidade_coletora')))?$dep->entidade_coletora:old('entidade_coletora')}}"/>
-                        @if($errors->has('entidade_coletora'))
-                            <p class="text-danger">{{$errors->first('entidade_coletora')}}</p>
-                        @endif
-                    </div>
-                    <br>
-                    <input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
+                    <div class="container">
+
+                    <div class="form-group">
+      <label for="local_coleta">Local do evento:</label>
+      <select class="form-control" id="sel1" name="local_coleta">
+     <option selected="{{(empty(old('entidade_coletora')))?$dep->entidade_coletora:old('entidade_coletora')}}"> {{(empty(old('entidade_coletora')))?$dep->entidade_coletora:old('entidade_coletora')}}</option>
+     @foreach($cedenteLocal as $c)
+        <option value="{{ $c->id}}">{{ $c ->endereco  }}</option>
+        @endforeach
+      </select>
+
+ 
+ 
+
+    <div class="form-group">
+      <label for="entidade_coletora">Entidade coletora:</label>
+      <select class="form-control" id="sel1" name="entidade_coletora">
+     <option selected="{{(empty(old('entidade_coletora')))?$dep->entidade_coletora:old('entidade_coletora')}}"> {{(empty(old('entidade_coletora')))?$dep->entidade_coletora:old('entidade_coletora')}}</option>
+     @foreach($entidadecoletora as $e)
+        <option value="{{ $e->id}}">{{ $e ->nome  }}</option>
+        @endforeach
+      </select>
+
+
+      <input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
                     <a href="/calendarioEvento" class="btn btn-primary btn-sm">Voltar</a>
                 </form>
-            </div>
-        </div>
-    </div>
+
 @endsection

@@ -31,8 +31,9 @@
            <td> {{$d ->telefone}}</td>
            <td> {{$d ->cidade_doacao}}</td>
            <td> {{$d ->tipo_sanguineo}}</td>
-       <td>  <a href="/doador/{{$d->id}}" class="btn btn-primary btn-sm">Detalhe</a> </td>
+     
        <td>  <a href="/doador/{{$d->id}}/edit" class="btn btn-primary btn-sm">Editar</a> </td>
+       <td>  <a href="/doador/{{$d->id}}" class="btn btn-primary btn-sm">Excluir</a> </td>
     </tr>
 
         <br>

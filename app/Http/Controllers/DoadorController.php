@@ -50,7 +50,7 @@ class DoadorController extends Controller
      */
     public function show(Doador $doador)
     {
-//
+        return View('doador.show')->with('e',$doador);
     }
 
     /**
@@ -86,7 +86,9 @@ class DoadorController extends Controller
      */
     public function destroy(Doador $doador)
     {
-        //
+        $doador->delete();
+
+        return redirect('/doador');
     }
 
 

@@ -21,6 +21,7 @@
     <a class="nav-link" href="/doador">Doador</a>
     <a class="nav-link" href="/entidadeColetora">Entidade Coletora</a>
     <a class="nav-link" href="/cedenteLocal">Cedente Local</a>
+    <a class="nav-link" href="/calendarioEvento">Calendario de Eventos</a>
 </nav>
 
 <!-- As views filhas incluem conteúdo aqui e no outro Arrobayield acima -->

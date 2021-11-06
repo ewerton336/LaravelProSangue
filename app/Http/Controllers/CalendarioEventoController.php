@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CalendarioEvento;
 use App\Models\CedenteLocal;
+use App\Models\EntidadeColetora;
 use Illuminate\Http\Request;
 
 class CalendarioEventoController extends Controller
@@ -16,8 +17,9 @@ class CalendarioEventoController extends Controller
     public function index()
     {
         $calendario = CalendarioEvento::all();
-
-        return View('calendarioEvento.index')->with('varView', $calendario);
+        $entidadecoletora = EntidadeColetora::all();
+        $cedenteLocal = CedenteLocal::all();
+        return view('calendarioEvento.index')->with('varView', $calendario)->with('entidadecoletora', $entidadecoletora)->with('cedenteLocal', $cedenteLocal);
     }
 
     /**
@@ -50,7 +52,7 @@ class CalendarioEventoController extends Controller
      */
     public function show(CalendarioEvento $calendarioEvento)
     {
-        //
+        return View('calendarioEvento.show')->with('e',$calendarioEvento);
     }
 
     /**
@@ -61,7 +63,9 @@ class CalendarioEventoController extends Controller
      */
     public function edit(CalendarioEvento $calendarioEvento)
     {
-        return View('calendarioEvento.edit')->with('dep', $calendarioEvento);
+        $entidadecoletora = EntidadeColetora::all();
+        $cedenteLocal = CedenteLocal::all();
+        return view('calendarioEvento.edit')->with('dep', $calendarioEvento)->with('entidadecoletora', $entidadecoletora)->with('cedenteLocal', $cedenteLocal);
     }
 
     /**
@@ -85,6 +89,11 @@ class CalendarioEventoController extends Controller
      */
     public function destroy(CalendarioEvento $calendarioEvento)
     {
-        //
+        $calendarioEvento->delete();
+
+        return redirect('/calendarioEvento');
     }
+
+
+    
 }

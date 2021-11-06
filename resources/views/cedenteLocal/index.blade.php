@@ -25,8 +25,9 @@
                     <td> {{$e ->telefone}}</td>
                     <td> {{$e ->endereco}}</td>
                     <td>  {{$e ->responsavel}}</td>
-                    <td>  <a href="/cedenteLocal/{{$e->id}}" class="btn btn-primary btn-sm">Detalhe</a></td>
+                   
                     <td> <a href="/cedenteLocal/{{$e->id}}/edit" class="btn btn-primary btn-sm">Editar</a></td>
+                    <td>  <a href="/cedenteLocal/{{$e->id}}" class="btn btn-primary btn-sm">Excluir</a></td>
                 </tr>
     @endforeach
     </div>
