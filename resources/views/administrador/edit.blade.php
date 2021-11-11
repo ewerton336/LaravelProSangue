@@ -17,30 +17,13 @@
                         @endif
                     </div>
                     <div>
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="form-control"
-                               value="{{(empty(old('email')))?$dep->email:old('email')}}"/>
+                        <label for="id_evento">Evento</label>
+                        <input type="text" name="id_evento" id="id_evento" class="form-control"
+                               value="{{(empty(old('id_evento')))?$dep->id_evento:old('id_evento')}}"/>
                         @if($errors->has('dt_nascimento'))
-                            <p class="text-danger">{{$errors->first('email')}}</p>
+                            <p class="text-danger">{{$errors->first('id_evento')}}</p>
                         @endif
                     </div>
-                    <div>
-                        <label for="login">Login</label>
-                        <input type="text" name="login" id="login" class="form-control"
-                               value="{{(empty(old('login')))?$dep->login:old('login')}}"/>
-                        @if($errors->has('login'))
-                            <p class="text-danger">{{$errors->first('login')}}</p>
-                        @endif
-                    </div>
-                    <div>
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senha" class="form-control"
-                               value="{{(empty(old('senha')))?$dep->senha:old('senha')}}"/>
-                        @if($errors->has('senha'))
-                            <p class="text-danger">{{$errors->first('senha')}}</p>
-                        @endif
-                    </div>
-                   
                     <input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>
                     <a href="/administrador" class="btn btn-primary btn-sm">Voltar</a>
                 </form>

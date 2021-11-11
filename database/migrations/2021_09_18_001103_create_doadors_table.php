@@ -19,7 +19,7 @@ class CreateDoadorsTable extends Migration
             $table->date('dt_nascimento');
             $table->string('endereco', 100);
             $table->integer('num_residencia');
-            $table->integer('telefone');
+            $table->bigInteger('telefone');
             $table->string('cidade_doacao', 50);
             $table->string('tipo_sanguineo');
            // $table->bigInteger('usuario_id')->unsigned();

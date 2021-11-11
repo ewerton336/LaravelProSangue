@@ -16,13 +16,14 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #FF5C5C;">
     <a class="navbar-brand" href="/">Home</a>
-    <a class="nav-link" href="/doador">Doador</a>
-    <a class="nav-link" href="/entidadeColetora">Entidade Coletora</a>
-    <a class="nav-link" href="/cedenteLocal">Cedente Local</a>
-    <a class="nav-link" href="/calendarioEvento">Calendario de Eventos</a>
-    <a class="nav-link" href="/administrador">Administrador</a>
+    <a class="nav-link text-light" href="/doador">Doador</a>
+    <a class="nav-link text-light" href="/entidadeColetora">Entidade Coletora</a>
+    <a class="nav-link text-light" href="/cedenteLocal">Cedente Local</a>
+    <a class="nav-link text-light" href="/calendarioEvento">Calendario de Eventos</a>
+    <a class="nav-link text-light" href="/administrador">Administrador</a>
+    <a class="nav-link text-light" href="/usuario">Usuario</a>
 </nav>
 
 <!-- As views filhas incluem conteúdo aqui e no outro Arrobayield acima -->

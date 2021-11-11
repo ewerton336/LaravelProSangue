@@ -1,7 +1,7 @@
 @extends('master')
 @section('titulo', 'Criar')
 @section('corpo')
-    <h3>Novo Cedente Local</h3>
+    <h3>Novo Evento</h3>
     @foreach($errors->all() as $e)
         {{$e}}
     @endforeach

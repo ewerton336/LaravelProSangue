@@ -1,5 +1,5 @@
 @extends('master')
-@section('titulo', 'cedenteLocal')
+@section('titulo', 'Administrador')
 @section('corpo')
     <div class="container-fluid col-12">
         <h3>Administradores:</h3>
@@ -11,9 +11,7 @@
             <tr>
                 <th>id</th>
                 <th>nome</th>
-                <th>email</th>
-                <th>login</th>
-                <th>senha</th>
+                <th>Evento que gerencia</th>
             </tr>
             </thead>
             <tbody>
@@ -22,9 +20,7 @@
                 <tr>
                 <td> {{$e->id}}</td>
                     <td> {{$e->nome}}</td>
-                    <td>  {{ $e ->email }}</td>
-                    <td> {{$e ->login}}</td>
-                    <td> {{$e ->senha}}</td>  
+                    <td>  {{ $e ->id_evento }}</td>
                     <td> <a href="/administrador/{{$e->id}}/edit" class="btn btn-primary btn-sm">Editar</a></td>
                     <td>  <a href="/administrador/{{$e->id}}" class="btn btn-primary btn-sm">Excluir</a></td>
                 </tr>

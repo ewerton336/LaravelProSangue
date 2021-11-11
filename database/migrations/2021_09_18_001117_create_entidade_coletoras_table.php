@@ -16,7 +16,7 @@ class CreateEntidadeColetorasTable extends Migration
         Schema::create('entidade_coletoras', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 50);
-            $table->integer('telefone');
+            $table->bigInteger('telefone');
             $table->string('nome_responsavel');
             $table->timestamps();
             //$table->bigInteger('usuario_id')->unsigned();

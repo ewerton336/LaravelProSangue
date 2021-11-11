@@ -22,3 +22,4 @@ Route::resource('entidadeColetora', \App\Http\Controllers\EntidadeColetoraContro
 Route::resource('cedenteLocal', \App\Http\Controllers\CedenteLocalController::class);
 Route::resource('calendarioEvento', \App\Http\Controllers\CalendarioEventoController::class);
 Route::resource('administrador', \App\Http\Controllers\AdministradorController::class);
+Route::resource('usuario', \App\Http\Controllers\UsuarioController::class);

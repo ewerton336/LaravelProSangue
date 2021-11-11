@@ -16,7 +16,7 @@ class CreateCedenteLocalsTable extends Migration
         Schema::create('cedente_locals', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 50);
-            $table->integer('telefone');
+            $table->bigInteger('telefone');
             $table->string('endereco', 700);
             $table->string('responsavel', 70);
             $table->timestamps();

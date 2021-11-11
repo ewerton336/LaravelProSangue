@@ -16,8 +16,8 @@ class CreateCalendarioEventosTable extends Migration
         Schema::create('calendario_eventos', function (Blueprint $table) {
             $table->id();
             $table->string('nome_evento', 100);
-            $table->date('dt_evemto');
-            $table->integer('qtd_interessados');
+            $table->date('dt_evento');
+          //  $table->integer('qtd_interessados');
             $table->string('local_coleta', 100);
             $table->string('entidade_coletora', 50);
             $table->timestamps();

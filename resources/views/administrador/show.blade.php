@@ -11,8 +11,8 @@
 	<dt>Nome</dt>
 	<dd>{{$e->nome}}</dd>
 
-	<dt>email</dt>
-	<dd>{{$e->email}}</dd>
+	<dt>Evento que gerencia</dt>
+	<dd>{{$e->id_evento}}</dd>
 
 
 	<form action="/administrador/{{$e->id}}" method="post">
