@@ -22,9 +22,7 @@
     <option value="AB-">AB-</option>
     <option value="O+">O+</option>
     <option value="O-">O-</option>
-
- 
-  </select>
+  </select> <br>
         <input type="submit" class="btn btn-primary btn-sm" value="Criar">
         <a href="/administrador/" class="btn btn-primary btn-sm">Voltar</a>
     </form>

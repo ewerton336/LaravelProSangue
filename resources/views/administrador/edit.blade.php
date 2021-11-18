@@ -17,11 +17,11 @@
                         @endif
                     </div>
                     <div>
-                        <label for="id_evento">Evento</label>
-                        <input type="text" name="id_evento" id="id_evento" class="form-control"
-                               value="{{(empty(old('id_evento')))?$dep->id_evento:old('id_evento')}}"/>
-                        @if($errors->has('dt_nascimento'))
-                            <p class="text-danger">{{$errors->first('id_evento')}}</p>
+                        <label for="tipo_admin">Tipo de Administrador</label>
+                        <input type="text" name="tipo_admin" id="tipo_admin" class="form-control"
+                               value="{{(empty(old('tipo_admin')))?$dep->tipo_admin:old('tipo_admin')}}"/>
+                        @if($errors->has('tipo_admin'))
+                            <p class="text-danger">{{$errors->first('tipo_admin')}}</p>
                         @endif
                     </div>
                     <input type="submit" value="Alterar" class="btn btn-primary btn-sm"/>

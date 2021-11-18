@@ -9,6 +9,6 @@ class Administrador extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome','id_evento'];
+    protected $fillable = ['nome','tipo_admin'];
 
 }

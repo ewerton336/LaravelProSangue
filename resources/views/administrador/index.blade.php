@@ -11,7 +11,7 @@
             <tr>
                 <th>id</th>
                 <th>nome</th>
-                <th>Evento que gerencia</th>
+                <th>Tipo de Administrador</th>
             </tr>
             </thead>
             <tbody>
@@ -20,7 +20,7 @@
                 <tr>
                 <td> {{$e->id}}</td>
                     <td> {{$e->nome}}</td>
-                    <td>  {{ $e ->id_evento }}</td>
+                    <td>  {{ $e ->tipo_admin }}</td>
                     <td> <a href="/administrador/{{$e->id}}/edit" class="btn btn-primary btn-sm">Editar</a></td>
                     <td>  <a href="/administrador/{{$e->id}}" class="btn btn-primary btn-sm">Excluir</a></td>
                 </tr>
