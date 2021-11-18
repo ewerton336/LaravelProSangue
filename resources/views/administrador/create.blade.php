@@ -1,7 +1,7 @@
 @extends('master')
 @section('titulo', 'Criar')
 @section('corpo')
-    <h3>Novo Doador</h3>
+    <h3>Novo Administrador</h3>
     @foreach($errors->all() as $e)
         {{$e}}
     @endforeach

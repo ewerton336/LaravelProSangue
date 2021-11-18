@@ -26,8 +26,8 @@
            <td>{{$d->id}} </td>
            <td>{{ $d ->nome  }} </td>
            <td>{{$d ->dt_nascimento}}</td>
-           <td> {{$d ->num_residencia}}</td>
            <td> {{$d ->endereco}}</td>
+           <td> {{$d ->num_residencia}}</td>
            <td> {{$d ->telefone}}</td>
            <td> {{$d ->cidade_doacao}}</td>
            <td> {{$d ->tipo_sanguineo}}</td>

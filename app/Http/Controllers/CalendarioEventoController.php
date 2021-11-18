@@ -29,7 +29,9 @@ class CalendarioEventoController extends Controller
      */
     public function create()
     {
-        return View('calendarioEvento.create');
+        $entidadescoletoras = EntidadeColetora::all();
+        $cedentesLocal = CedenteLocal::all();
+        return View('calendarioEvento.create')->with('entidadescoletoras', $entidadescoletoras)->with('cedentesLocal', $cedentesLocal);;
     }
 
     /**

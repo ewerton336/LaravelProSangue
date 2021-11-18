@@ -23,3 +23,4 @@ Route::resource('cedenteLocal', \App\Http\Controllers\CedenteLocalController::cl
 Route::resource('calendarioEvento', \App\Http\Controllers\CalendarioEventoController::class);
 Route::resource('administrador', \App\Http\Controllers\AdministradorController::class);
 Route::resource('usuario', \App\Http\Controllers\UsuarioController::class);
+Route::resource('adminEvento', \App\Http\Controllers\AdminEventoController::class);

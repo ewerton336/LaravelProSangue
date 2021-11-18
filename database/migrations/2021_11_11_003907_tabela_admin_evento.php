@@ -13,14 +13,14 @@ class TabelaAdminEvento extends Migration
      */
     public function up()
     {
-        Schema::create('admin_evento', function (Blueprint $table) {
+        Schema::create('admin_eventos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->bigInteger('id_admin')->unsigned();
             $table->bigInteger('id_evento')->unsigned();
         });
 
-        Schema::table('admin_evento', function (Blueprint $table) {
+        Schema::table('admin_eventos', function (Blueprint $table) {
             $table->foreign('id_admin')->references('id')
             ->on('administradors');
             $table->foreign('id_evento')->references('id')
@@ -35,6 +35,6 @@ class TabelaAdminEvento extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin_evento');
+        Schema::dropIfExists('admin_eventos');
     }
 }

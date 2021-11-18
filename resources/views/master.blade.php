@@ -24,9 +24,12 @@
     <a class="nav-link text-light" href="/calendarioEvento">Calendario de Eventos</a>
     <a class="nav-link text-light" href="/administrador">Administrador</a>
     <a class="nav-link text-light" href="/usuario">Usuario</a>
+    <a class="nav-link text-light" href="/adminEvento">Eventos X Administradores (N para N)</a>
 </nav>
 
+<div class="container">
 <!-- As views filhas incluem conteúdo aqui e no outro Arrobayield acima -->
 @yield('corpo')
 </body>
 </html>
+</div>
